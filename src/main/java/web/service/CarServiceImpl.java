@@ -23,6 +23,9 @@ public class CarServiceImpl implements CarService {
     @Override
     public List<Car> getSomeCars (int count) {     // вот так???
         List<Car> carList = new ArrayList<>();
+        if (count >= 5) {
+            count = 5;
+        }
         for (int i = 0; i < count; i++) {
             carList.add(cars.get(i));
         }
